@@ -1,0 +1,29 @@
+<div class="d-flex justify-content-between">
+    <h1>Welcome @Context.Session.GetString("name")</h1>
+    <a href="/logout" class="btn btn-danger">Logout</a>
+</div>
+<div class="container d-flex justify-content-center">
+    <h1>@Context.Session.GetInt32("sum")</h1>
+</div>
+<div class="container d-flex justify-content-around">
+    <div class="container d-flex justify-content-center">
+        <form asp-action="AddOne">
+            <button type="submit" class="btn btn-primary">+</button>
+        </form>
+    </div>
+    <div class="container d-flex justify-content-center">
+        <form asp-action="SubtractOne">
+            <button type="submit" class="btn btn-primary">-</button>
+        </form>
+    </div>
+    <div class="container d-flex justify-content-center">
+        <form asp-action="AddTwo">
+            <button type="submit" class="btn btn-primary">X2</button>
+        </form>
+    </div>
+    <div class="container d-flex justify-content-center">
+        <form asp-action="Random">
+            <button type="submit" class="btn btn-primary">Random</button>
+        </form>
+    </div>
+</div>
